@@ -1,0 +1,724 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Mobile 1.2.0 RTL Demo Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="rtl.jquery.mobile-1.2.0.min.css" />
+    <script src="jquery-1.8.2.min.js"></script>
+    <script src="rtl.jquery.mobile-1.2.0.min.js"></script>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>ج-كويري موبايل 1.2.0</h1>
+        </div>
+        
+        <div data-role="content">
+            
+            <div><!-- popup variations -->
+            <a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true">افتح النافذة</a>
+            <a href="#popupInfo" data-rel="popup" data-role="button" data-inline="true">تلميح</a>
+		    <a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true">قائمة</a>
+		    <a href="#popupNested" data-rel="popup" data-role="button" data-inline="true">قائمة متداخلة</a>
+		    <a href="#popupLogin" data-rel="popup" data-position-to="window" data-role="button" data-inline="true">نموذج</a>
+		    <a href="#popupDialog" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-transition="pop">حوار</a>
+		    <a href="#popupPhoto" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-transition="fade">صورة</a>
+            
+
+            <!-- popup variation pages-->
+            <div data-role="popup" id="popupBasic">
+			    <p>نافذة منبثقة تقليدية صغيرة بدون أي خيارات.</p>
+		    </div>
+
+            <div data-role="popup" id="popupInfo" class="ui-content" data-theme="e" style="max-width:350px;">
+                <p>هذا <strong>تلميح</strong> يشرح ما يفعله المفتاح مثلا</p>
+		    </div>
+
+		    <div data-role="popup" id="popupMenu" data-theme="a">
+				<ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="b">
+					<li data-role="divider" data-theme="a">عنوان القائمة</li>
+					<li><a href="#">موز</a></li>
+					<li><a href="#">تفاح</a></li>
+					<li><a href="#">برتقال</a></li>
+				</ul>
+		    </div>
+
+		    <div data-role="popup" id="popupNested" data-theme="none">
+			<div data-role="collapsible-set" data-theme="b" data-content-theme="c" data-expanded-icon="arrow-d" style="margin:0; width:250px;">
+				<div data-role="collapsible" data-inset="false">
+					<h2>فاكهة</h2>
+					<ul data-role="listview">
+						<li><a href="#" data-rel="dialog">تفاح</a></li>
+						<li><a href="#" data-rel="dialog">موز</a></li>
+						<li><a href="#" data-rel="dialog">برتقال</a></li>
+						<li><a href="#" data-rel="dialog">عنب</a></li>
+					</ul>
+				</div><!-- /collapsible -->
+				<div data-role="collapsible" data-inset="false">
+					<h2>طيور</h2>
+					<ul data-role="listview">
+						<li><a href="#" data-rel="dialog">بطريق</a></li>
+                        <li><a href="#" data-rel="dialog">بومه</a></li>
+						<li><a href="#" data-rel="dialog">تنين</a></li>
+					</ul>
+				</div><!-- /collapsible -->
+				<div data-role="collapsible" data-inset="false">
+					<h2>خضروات</h2>
+					<ul data-role="listview">
+						<li><a href="#" data-rel="dialog">بطاطس</a></li>
+						<li><a href="#" data-rel="dialog">بطاطا</a></li>
+					</ul>
+				</div><!-- /collapsible -->
+			</div><!-- /collapsible set -->
+		</div>
+		
+		    <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+			<form>
+				<div style="padding:10px 20px;">
+				  <h3>تسجيل الدخول</h3>
+		          <label for="un" class="ui-hidden-accessible">اسم المستخدم:</label>
+		          <input type="text" name="user" id="un" value="" placeholder="الاسم" data-theme="a" />
+
+		          <label for="pw" class="ui-hidden-accessible">كلمة المرور:</label>
+		          <input type="password" name="pass" id="pw" value="" placeholder="كلمة المرور" data-theme="a" />
+
+		    	  <button type="submit" data-theme="b">دخول</button>
+				</div>
+			</form>
+		</div>
+		
+		    <div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="c" style="max-width:400px;" class="ui-corner-all">
+			    <div data-role="header" data-theme="a" class="ui-corner-top">
+				    <h1>اطلاق القمر</h1>
+			    </div>
+			    <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+				    <h3 class="ui-title">هل أنت متأكد حقا أنك تريد اطلاق القمر الاصطناعي؟</h3>
+				    <p>لا يمكن التراجع عن هذه العملية</p>
+				    <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">الغاء</a>    
+				    <a href="#" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b">نعم</a>  
+			    </div>
+		    </div>
+
+		    <div data-role="popup" id="popupPhoto" data-overlay-theme="a" data-theme="d" data-corners="false">
+			    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">اغلاق</a><img class="popphoto" src="demo-images/panda.jpg" alt="باندا">
+		    </div>
+            <!-- /popup variation pages-->
+            
+            </div><!-- /popup variations -->
+            
+            <p>&nbsp;</p>
+
+            <div><!-- bars -->
+            <div class="ui-bar ui-bar-b">
+                <h3>أنا شريط ومعي زر صغير <a href="#" data-role="button" data-inline="true" data-mini="true">أنا الزر</a></h3>
+            </div>
+            <p>&nbsp;</p>
+            <div data-role="navbar" data-grid="d">
+			    <ul>
+				    <li><a href="#" class="ui-btn-active">أ</a></li>
+				    <li><a href="#">ب</a></li>
+				    <li><a href="#">ج</a></li>
+				    <li><a href="#">د</a></li>
+				    <li><a href="#">ه</a></li>
+			    </ul>
+		    </div>
+	        <p>&nbsp;</p>
+		    <div data-role="navbar">
+			    <ul>
+				    <li><a href="#" class="ui-btn-active">أ</a></li>
+				    <li><a href="#">ب</a></li>
+				    <li><a href="#">ج</a></li>
+				    <li><a href="#">د</a></li>
+				    <li><a href="#">ه</a></li>
+				    <li><a href="#">و</a></li>
+				    <li><a href="#">ز</a></li>
+				    <li><a href="#">ح</a></li>
+				    <li><a href="#">ط</a></li>
+				    <li><a href="#">ي</a></li>
+			    </ul>
+		    </div>
+            <p>&nbsp;</p>
+		    <div data-role="navbar" data-iconpos="left">
+			    <ul>
+				    <li><a href="#" data-icon="grid">أيقوانات</a></li>
+				    <li><a href="#" data-icon="star" class="ui-btn-active">على</a></li>
+				    <li><a href="#" data-icon="gear">اليسار</a></li>
+			    </ul>
+		    </div>
+            <p>&nbsp;</p>
+            <div data-role="navbar" data-iconpos="right">
+			    <ul>
+				    <li><a href="#" data-icon="grid">أيقوانات</a></li>
+				    <li><a href="#" data-icon="star" class="ui-btn-active">على</a></li>
+				    <li><a href="#" data-icon="gear">اليمين</a></li>
+			    </ul>
+		    </div>
+            <p>&nbsp;</p>
+            <div data-role="navbar" data-iconpos="right">
+			    <ul>
+				    <li><a href="#" data-icon="grid">بار</a></li>
+				    <li><a href="#" data-icon="star" class="ui-btn-active">وضع</a></li>
+				    <li><a href="#" data-icon="gear">افتراضي</a></li>
+			    </ul>
+		    </div>
+            <p>&nbsp;</p>
+		    <div data-role="navbar">
+			    <ul>
+				    <li><a href="#" data-icon="grid"data-theme="a">أ</a></li>
+				    <li><a href="#" data-icon="star" data-theme="b">ب</a></li>
+				    <li><a href="#" data-icon="gear" data-theme="c">ج</a></li>
+				    <li><a href="#" data-icon="arrow-l" data-theme="d">د</a></li>
+				    <li><a href="#" data-icon="arrow-r" data-theme="e">ه</a></li>
+			    </ul>
+		    </div>
+            <p>&nbsp;</p>
+            <div data-role="header">
+			    <a href="#" data-icon="delete" iconpos="notext">الغاء</a>
+			    <h1>شريط أ</h1>
+			    <a href="#" data-icon="arrow-r" data-iconpos="right" data-theme="b">حفظ</a>
+		    </div>
+            </div><!-- /bars -->
+
+            <p>&nbsp;</p>
+
+            <div><!-- buttons -->
+                <a href="#" data-role="button" data-icon="delete">تلقائي</a>
+                <a href="#" data-role="button" data-icon="delete" data-iconpos="right">يمين</a>
+                <a href="#" data-role="button" data-icon="delete" data-iconpos="left">يسار</a>
+                <a href="#" data-role="button" data-icon="delete" data-iconpos="bottom">تحت</a>
+                <a href="#" data-role="button" data-icon="delete" data-iconpos="top">فوق</a>
+
+                <p>&nbsp;</p>
+
+                <a href="#" data-role="button" data-icon="delete" data-mini="true" data-inline="true">تلقائي</a>
+                <a href="#" data-role="button" data-icon="delete" data-iconpos="left" data-mini="true" data-inline="true">يسار</a>
+			    <a href="#" data-role="button" data-icon="delete" data-iconpos="right" data-mini="true" data-inline="true">يمين</a>
+			    <a href="#" data-role="button" data-icon="delete" data-iconpos="top" data-mini="true" data-inline="true">فوق</a>
+			    <a href="#" data-role="button" data-icon="delete" data-iconpos="bottom" data-mini="true" data-inline="true">تحت</a>
+			    <a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-mini="true" data-inline="true">أيقونة</a>
+                
+                <p>&nbsp;</p>
+
+                <div data-role="controlgroup"  data-type="horizontal">
+		            <a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-theme="b" data-inline="true">يسار</a>
+		            <a href="#" data-role="button" data-icon="arrow-r" data-iconpos="notext" data-theme="b" data-inline="true">يمين</a>
+		            <a href="#" data-role="button" data-icon="arrow-u" data-iconpos="notext" data-theme="b" data-inline="true">فوق</a>
+		            <a href="#" data-role="button" data-icon="arrow-d" data-iconpos="notext" data-theme="b" data-inline="true">تحت</a>
+		            <a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-theme="b" data-inline="true">حذف</a>
+		            <a href="#" data-role="button" data-icon="plus" data-iconpos="notext" data-theme="b" data-inline="true">اضافة</a>
+		            <a href="#" data-role="button" data-icon="minus" data-iconpos="notext" data-theme="b" data-inline="true">سالب</a>
+		            <a href="#" data-role="button" data-icon="check" data-iconpos="notext" data-theme="b" data-inline="true">صح</a>
+		            <a href="#" data-role="button" data-icon="gear" data-iconpos="notext" data-theme="b" data-inline="true">ترس</a>
+		        </div>
+
+                <p>&nbsp;</p>
+
+                <div data-role="controlgroup">
+                    <a href="#" data-role="button">نعم</a>
+                    <a href="#" data-role="button">لا</a>
+                    <a href="#" data-role="button">ربما</a>
+                </div>
+
+                <p>&nbsp;</p>
+
+                <div data-role="controlgroup" data-type="horizontal">
+			        <a href="#" data-role="button">نعم</a>
+			        <a href="#" data-role="button">لا</a>
+			        <a href="#" data-role="button">ربما</a>
+		        </div>
+
+                <p>&nbsp;</p>
+
+                <div data-role="controlgroup" data-type="horizontal" data-mini="true">
+			        <a href="#" data-role="button">نعم</a>
+			        <a href="#" data-role="button">لا</a>
+			        <a href="#" data-role="button">ربما</a>
+		        </div>
+
+                <p>&nbsp;</p>
+
+                <div data-role="controlgroup" data-type="horizontal" >
+			        <a href="#" data-role="button" data-icon="plus">اضف</a>
+			        <a href="#" data-role="button" data-icon="delete">احذف</a>
+		        </div>
+
+                <p>&nbsp;</p>
+
+                <div data-mini="true" data-role="controlgroup" data-type="horizontal" >
+			        <a href="#" data-role="button" data-icon="plus">اضف</a>
+			        <a href="#" data-role="button" data-icon="delete">احذف</a>
+		        </div>
+
+                <p>&nbsp;</p>
+
+                <a href="#" data-role="button" data-theme="a" data-icon="arrow-l" data-inline="true">أ</a>
+		        <a href="#" data-role="button" data-theme="b" data-icon="arrow-l" data-inline="true">ب</a>
+		        <a href="#" data-role="button" data-theme="c" data-icon="arrow-l" data-inline="true">ج</a>
+		        <a href="#" data-role="button" data-theme="d" data-icon="arrow-l" data-inline="true">د</a>
+		        <a href="#" data-role="button" data-theme="e" data-icon="arrow-l" data-inline="true">ه</a>
+
+            </div><!-- /buttons -->
+
+            <p>&nbsp;</p>
+
+            <div><!-- layout -->
+                <div class="ui-grid-c">
+			        <div class="ui-block-a"><div class="ui-bar ui-bar-e" style="height:80px">أ</div></div>
+			        <div class="ui-block-b"><div class="ui-bar ui-bar-e" style="height:80px">ب</div></div>
+			        <div class="ui-block-c"><div class="ui-bar ui-bar-e" style="height:80px">ج</div></div>
+			        <div class="ui-block-d"><div class="ui-bar ui-bar-e" style="height:80px">د</div></div>
+		        </div>
+                <p>&nbsp;</p>
+                <div class="ui-grid-d">
+			        <div class="ui-block-a"><div class="ui-bar ui-bar-e" style="height:80px">أ</div></div>
+			        <div class="ui-block-b"><div class="ui-bar ui-bar-e" style="height:80px">ب</div></div>
+			        <div class="ui-block-c"><div class="ui-bar ui-bar-e" style="height:80px">ج</div></div>
+			        <div class="ui-block-d"><div class="ui-bar ui-bar-e" style="height:80px">د</div></div>
+			        <div class="ui-block-e"><div class="ui-bar ui-bar-e" style="height:80px">ه</div></div>
+		        </div>
+                <p>&nbsp;</p>
+                <div class="ui-grid-b">
+			        <div class="ui-block-a"><div class="ui-bar ui-bar-e" style="height:80px">أ</div></div>
+			        <div class="ui-block-b"><div class="ui-bar ui-bar-e" style="height:80px">ب</div></div>
+			        <div class="ui-block-c"><div class="ui-bar ui-bar-e" style="height:80px">ج</div></div>
+			        <div class="ui-block-a"><div class="ui-bar ui-bar-e" style="height:80px">د</div></div>
+			        <div class="ui-block-b"><div class="ui-bar ui-bar-e" style="height:80px">ه</div></div>
+			        <div class="ui-block-c"><div class="ui-bar ui-bar-e" style="height:80px">و</div></div>
+			        <div class="ui-block-a"><div class="ui-bar ui-bar-e" style="height:80px">ز</div></div>
+			        <div class="ui-block-b"><div class="ui-bar ui-bar-e" style="height:80px">ح</div></div>
+			        <div class="ui-block-c"><div class="ui-bar ui-bar-e" style="height:80px">ط</div></div>
+		        </div>
+                <p>&nbsp;</p>
+                <div data-role="collapsible" data-collapsed="false" data-theme="e" data-content-theme="c">
+			        <h3>العنوان</h3>
+			        <p>أنا الكلام المكتوب الذي تقرأه الآن وتستكمل القراءة حبا في الفضول.</p>
+			
+			        <div data-role="collapsible" data-theme="c" data-content-theme="c">
+				        <h3>الولد الأول</h3>
+				        <p>أنا نص الولد الأول</p>
+					        <div data-role="collapsible" data-theme="d" data-content-theme="d">
+						        <h3>الحفيد</h3>
+						        <p>أنا نص الحفيد.</p>
+					        </div><!-- /section 1A -->
+			        </div> <!-- /section 1 -->
+
+			        <div data-role="collapsible" data-content-theme="c">
+				        <h3>الولد الثاني</h3>
+				        <form action="#" method="get">
+					        <div data-role="fieldcontain">
+						        <label for="textarea">صندوق كبير:</label>
+						        <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+					        </div>
+					        <div data-role="fieldcontain">
+						        <label for="slider">سلايدر:</label>
+					 	        <input type="range" name="slider" id="slider" value="0" min="0" max="100"  />
+					        </div>
+					        <fieldset class="ui-grid-a">
+							        <div class="ui-block-a"><button type="submit" data-theme="c">الغاء</button></div>
+							        <div class="ui-block-b"><button type="submit" data-theme="b">حفظ</button></div>	   
+				            </fieldset>
+				        </form>
+			        </div> <!-- /section 2 -->
+
+			        <div data-role="collapsible" data-content-theme="c">
+				        <h3>الولد الثالث</h3>
+				        <p>لدي قائمة فاكهة:</p>
+				        <ul data-role="listview" data-inset="true" data-theme="d">
+					        <li><a href="#">موز</a></li>
+					        <li><a href="#">تفاح</a></li>
+					        <li><a href="#">عنب</a></li>
+					        <li><a href="#">برتقال</a></li>
+					        <li><a href="#">بطيخ</a></li>
+				        </ul>
+			        </div> <!-- /section 3 -->
+		        </div>
+                <p>&nbsp;</p>
+                <div data-role="collapsible-set" data-theme="a">
+			        <div data-role="collapsible" data-theme="a" data-content-theme="a">
+				        <h3>القسم 1</h3>
+				        <p>القسم تلقائي يرث مكان الأيقونه من أبوه، يمين بعد التعريب</p>
+			        </div>
+			        <div data-role="collapsible" data-theme="b" data-iconpos="left" data-content-theme="b">
+				        <h3>القسم الثاني</h3>
+				        <p>يسار</p>
+			        </div>
+                    <div data-role="collapsible" data-theme="e" data-iconpos="right" data-content-theme="e">
+				        <h3>القسم الثاني</h3>
+				        <p>يمين</p>
+			        </div>
+			        <div data-role="collapsible" data-theme="a" data-iconpos="bottom" data-content-theme="e">
+				        <h3>الثالث</h3>
+				        <p>تحت</p>
+			        </div>
+			        <div data-role="collapsible" data-theme="b" data-iconpos="top" data-content-theme="b">
+				        <h3>الرابع</h3>
+				        <p>فوق</p>
+			        </div>
+		        </div>
+                <p>&nbsp;</p>
+                <div class="ui-body ui-body-a">
+			        <h1>رأس أ</h1>
+			        <p>هذا نص المحتوى الذي يمكن أن يحتوي على بعض <a href="#">الروابط</a> والخطوط <b>العريضة</b> وربما <em>المائلة</em>.</p>
+			        <div data-role="collapsible" data-collapsed="false" data-theme="a" data-content-theme="b">
+				        <h3>قسم 1</h3>
+				        <p>محتوى قسم 1 مفتوح تلقائيا</p>
+			        </div>
+			        <div data-role="collapsible" data-theme="a" data-content-theme="b">
+				        <h3>الثاني</h3>
+				        <p>أي كلام في القسم الثاني وكدا.</p>
+			        </div>
+		        </div>
+            </div><!-- /layout -->
+
+            <p>&nbsp;</p>
+
+            <div><!-- forms -->
+            <form action="#" method="get">
+                
+                <p><strong>نموذج كبير</strong></p>
+
+			    <div data-role="fieldcontain">
+	             <label for="namekdjmfrm1">صندوق نص:</label>
+	             <input type="text" name="namekdjmfrm1" id="namekdjmfrm1" value=""  />
+			    </div>
+
+			    <div data-role="fieldcontain">
+			    <label for="textarea1jn">صندوق كبير:</label>
+			    <textarea cols="40" rows="8" name="textarea1jn" id="textarea1jn"></textarea>
+			    </div>
+
+			    <div data-role="fieldcontain">
+	             <label for="seanrchnaikd">بحث:</label>
+	             <input type="search" name="seanrchnaikd" id="seanrchnaikd" value=""  />
+			    </div>
+
+			    <div data-role="fieldcontain">
+				    <label for="slinder2kd">مفتاح:</label>
+				    <select name="slinder2kd" id="slinder2kd" data-role="slider">
+					    <option value="off">مغلق</option>
+					    <option value="on">شغال</option>
+				    </select>
+			    </div>
+
+			    <div data-role="fieldcontain">
+				    <label for="sjliderjdn3n">سلايدر:</label>
+			 	    <input type="range" name="sjliderjdn3n" id="sjliderjdn3n" value="50" min="0" max="100" data-highlight="true"  />
+			    </div>
+
+			    <div data-role="fieldcontain">
+			    <fieldset data-role="controlgroup">
+				    <legend>خيار متعدد</legend>
+				    <input type="checkbox" name="ch3eckboxdk1a" id="ch3eckboxdk1a" class="custom" />
+				    <label for="ch3eckboxdk1a">موز</label>
+
+				    <input type="checkbox" name="checkboxdnv2a" id="checkboxdnv2a" class="custom" />
+				    <label for="checkboxdnv2a">تفاح</label>
+
+				    <input type="checkbox" name="chddeckboxbn3a" id="chddeckboxbn3a" class="custom" />
+				    <label for="chddeckboxbn3a">برتقال</label>
+
+				    <input type="checkbox" name="checdmkboxen4a" id="checdmkboxen4a" class="custom" />
+				    <label for="checdmkboxen4a">بطيخ</label>
+		        </fieldset>
+			    </div>
+
+			    <div data-role="fieldcontain">
+			    <fieldset data-role="controlgroup" data-type="horizontal">
+		    	    <legend>خيار متعدد 2:</legend>
+		    	    <input type="checkbox" name="checkboxdjndnd6" id="checkboxdjndnd6" class="custom" />
+				    <label for="checkboxdjndnd6">تنين</label>
+
+				    <input type="checkbox" name="checkboxdjvneevn7" id="checkboxdjvneevn7" class="custom" />
+				    <label for="checkboxdjvneevn7">بطريق</label>
+
+				    <input type="checkbox" name="checkboxvdmdmvdme38" id="checkboxvdmdmvdme38" class="custom" />
+				    <label for="checkboxvdmdmvdme38">بومه</label>
+		        </fieldset>
+			    </div>
+
+			    <div data-role="fieldcontain">
+			        <fieldset data-role="controlgroup">
+			    	    <legend>خيار وحيد</legend>
+			         	    <input type="radio" name="radiochoicejdknn3m31" id="radiochoicejdknn3m31" value="choice-1" />
+			         	    <label for="radiochoicejdknn3m31">الدنيا</label>
+
+			         	    <input type="radio" name="radiochoicejdknn3m31" id="radiochoicejdknn3m32j" value="choice-2"  />
+			         	    <label for="radiochoicejdknn3m32j">البرزخ</label>
+
+			         	    <input type="radio" name="radiochoicejdknn3m31" id="radiojvn3choice3" value="choice-3"  />
+			         	    <label for="radiojvn3choice3">الآخرة</label>
+			        </fieldset>
+			    </div>
+
+			    <div data-role="fieldcontain">
+			        <fieldset data-role="controlgroup" data-type="horizontal">
+			     	    <legend>خيار وحيد 2</legend>
+			         	    <input type="radio" name="radiojdchoicec3jnkd" id="radiojdchoicec3jnkd" />
+			         	    <label for="radiojdchoicec3jnkd">الدنيا</label>
+			         	    <input type="radio" name="radiojdchoicec3jnkd" id="radio3jvchoicj3fd" />
+			         	    <label for="radio3jvchoicj3fd">البرزخ</label>
+			         	    <input type="radio" name="radiojdchoicec3jnkd" id="radiochoicedkvmdfde"  />
+			         	    <label for="radiochoicedkvmdfde">الآخرة</label>
+			        </fieldset>
+			    </div>
+
+			    <div data-role="fieldcontain">
+				    <label for="selectjdvddjvchoicej1" class="select">قائمة</label>
+				    <select name="selectjdvddjvchoicej1" id="selectjdvddjvchoicej1">
+					    <option>بطاطس</option>
+					    <option>بطاطا</option>
+					    <option>باذنجان</option>
+				    </select>
+			    </div>
+
+			    <div data-role="fieldcontain">
+				    <label for="selectdd3choicejdjvnda" class="select">قائمة 2:</label>
+				    <select name="selectdd3choicejdjvnda" id="selectdd3choicejdjvnda" data-native-menu="false">
+					    <option>اختار</option>
+                        <option>بطاطس</option>
+					    <option>بطاطا</option>
+					    <option>باذنجان</option>
+					    <option>بيتزا</option>
+				    </select>
+			    </div>
+
+		        <div class="ui-body ui-body-b">
+		        <fieldset class="ui-grid-a">
+				        <div class="ui-block-a"><button type="submit" data-theme="d">الغاء</button></div>
+				        <div class="ui-block-b"><button type="submit" data-theme="a">ارسال</button></div>
+	            </fieldset>
+		        </div>
+	        </form>
+            <p>&nbsp;</p>
+            <div class="ui-body ui-body-a">
+                
+                <p><strong>نموذج صغير</strong></p>
+
+			    <div data-role="fieldcontain">
+	             <label for="djv9jvmdsss">صندوق نص:</label>
+	             <input type="text" name="djv9jvmdsss" id="djv9jvmdsss" value="" data-mini="true" />
+			    </div>
+
+			    <div data-role="fieldcontain">
+			    <label for="textareadkdjvdw">صندوق كبير:</label>
+			    <textarea cols="40" rows="8" name="textareadkdjvdw" id="textareadkdjvdw" data-mini="true"></textarea>
+			    </div>
+
+			    <div data-role="fieldcontain">
+	             <label for="search1jdfjd">بحث:</label>
+	             <input type="search" name="search1jdfjd" id="search1jdfjd" value="" data-mini="true" />
+			    </div>
+
+			    <div data-role="fieldcontain">
+				    <label for="sekdvn3ldmvmd">مفتاح:</label>
+				    <select name="sekdvn3ldmvmd" id="sekdvn3ldmvmd" data-role="slider" data-mini="true">
+					    <option value="off">مغلق</option>
+					    <option value="on">شغال</option>
+				    </select>
+			    </div>
+
+			    <div data-role="fieldcontain">
+				    <label for="djvnek3mfd33jd">سلايدر:</label>
+			 	    <input type="range" name="djvnek3mfd33jd" id="djvnek3mfd33jd" value="50" min="0" max="100" data-highlight="true" data-mini="true" />
+			    </div>
+
+			    <div data-role="fieldcontain">
+			    <fieldset data-role="controlgroup" data-mini="true">
+				    <legend>خيار متعدد</legend>
+				    <input type="checkbox" name="checkbox1djdjd0" id="checkbox1djdjd0" class="custom" />
+				    <label for="checkbox1djdjd0">موز</label>
+
+				    <input type="checkbox" name="checkboxjdjdjdwnfd20" id="checkboxjdjdjdwnfd20" class="custom" />
+				    <label for="checkboxjdjdjdwnfd20">تفاح</label>
+
+				    <input type="checkbox" name="checkbox3djdjvnenvd0" id="checkbox3djdjvnenvd0" class="custom" />
+				    <label for="checkbox3djdjvnenvd0">برتقال</label>
+
+				    <input type="checkbox" name="checkboxjdvn3mdm40" id="checkboxjdvn3mdm40" class="custom" />
+				    <label for="checkboxjdvn3mdm40">بطيخ</label>
+		        </fieldset>
+			    </div>
+
+			    <div data-role="fieldcontain">
+			    <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal">
+		    	    <legend>خيار متعدد 2:</legend>
+		    	    <input type="checkbox" name="checkbox51jdvd" id="checkbox51jdvd" class="custom" />
+				    <label for="checkbox51jdvd">تنين</label>
+
+				    <input type="checkbox" name="checkbdjox63j" id="checkbdjox63j" class="custom" />
+				    <label for="checkbdjox63j">بطريق</label>
+
+				    <input type="checkbox" name="checdjdvnkbox7bn" id="checdjdvnkbox7bn" class="custom" />
+				    <label for="checdjdvnkbox7bn">بومه</label>
+		        </fieldset>
+			    </div>
+
+			    <div data-role="fieldcontain">
+			        <fieldset data-role="controlgroup" data-mini="true">
+			    	    <legend>خيار وحيد</legend>
+			         	    <input type="radio" name="radio1nbjbnendm" id="radio1nbjbnendm" value="choice-1" />
+			         	    <label for="radio1nbjbnendm">الدنيا</label>
+
+			         	    <input type="radio" name="radio1nbjbnendm" id="radioddjv2nbj" value="choice-2"  />
+			         	    <label for="radioddjv2nbj">البرزخ</label>
+
+			         	    <input type="radio" name="radio1nbjbnendm" id="radidjvdo3nbj" value="choice-3"  />
+			         	    <label for="radidjvdo3nbj">الآخرة</label>
+			        </fieldset>
+			    </div>
+
+			    <div data-role="fieldcontain">
+			        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+			     	    <legend>خيار وحيد 2</legend>
+			         	    <input type="radio" name="radio4nbijnenm" id="radio4nbijnenm" />
+			         	    <label for="radio4nbijnenm">الدنيا</label>
+			         	    <input type="radio" name="radio4nbijnenm" id="radio5nbidjnmmdn" />
+			         	    <label for="radio5nbidjnmmdn">البرزخ</label>
+			         	    <input type="radio" name="radio4nbijnenm" id="radio6ndjdjvndbi"  />
+			         	    <label for="radio6ndjdjvndbi">الآخرة</label>
+			        </fieldset>
+			    </div>
+
+			    <div data-role="fieldcontain">
+				    <label for="select2jdnne" class="select">قائمة</label>
+				    <select name="select2jdnne" id="select2jdnne" data-mini="true">
+					    <option>بطاطس</option>
+					    <option>بطاطا</option>
+					    <option>بيتزا</option>
+				    </select>
+			    </div>
+
+			    <div data-role="fieldcontain">
+				    <label for="select3jdjvnmm3me" class="select">قائمة 2:</label>
+				    <select name="select3jdjvnmm3me" id="select3jdjvnmm3me" data-native-menu="false" data-mini="true">
+					    <option>اختار</option>
+                        <option>بطاطس</option>
+					    <option>بطاطا</option>
+					    <option>بيتزا</option>
+				    </select>
+			    </div>
+
+		        <div class="ui-body ui-body-a">
+		        <fieldset class="ui-grid-a" data-mini="true">
+				        <div class="ui-block-a"><button type="submit" data-theme="d" data-mini="true">الغاء</button></div>
+				        <div class="ui-block-b"><button type="submit" data-theme="a" data-mini="true">ارسال</button></div>
+	            </fieldset>
+		        </div>
+	        </div>
+            </div><!-- /forms -->
+
+            <p>&nbsp;</p>
+
+            <div><!-- /lists -->
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#">بطاطس</a></li>
+				<li><a href="#">تفاح</a></li>
+				<li><a href="#">موز</a></li>
+				<li><a href="#">بطيخ</a></li>
+				<li><a href="#">بطاطا</a></li>
+			</ul>
+
+            <p>&nbsp;</p>
+
+            <ul data-role="listview">
+				<li><a href="#">تفاح</a></li>
+				<li><a href="#">موز</a></li>
+				<li><a href="#">بطيخ</a></li>
+			</ul>
+
+            <p>&nbsp;</p>
+
+		    <ul data-role="listview" data-inset="true">
+			<li><a href="#">الوارد <span class="ui-li-count">12</span></a></li>
+				<li><a href="#">الصادر <span class="ui-li-count">0</span></a></li>
+				<li><a href="#">الحافظة <span class="ui-li-count">4</span></a></li>
+				<li><a href="#">المرسل <span class="ui-li-count">328</span></a></li>
+				<li><a href="#">المهمل <span class="ui-li-count">62</span></a></li>
+		    </ul>
+		
+		    <p>&nbsp;</p>
+
+			<ol data-role="listview" data-inset="true">
+                <li><a href="#">محمد عبد الوهاب</a></li>
+				<li><a href="#">عمر خيرت</a></li>
+                <li><a href="#">سعد محمد حسن</a></li>
+				<li><a href="#">ياسر عبد الرحمن</a></li>
+			</ol>
+			
+		    <p>&nbsp;</p>
+
+		    <ul data-role="listview" data-inset="true">
+			<li><a href="#">
+				<h3>الانشكاح الحلزوني</h3>
+				<p><strong>لماذا يتحلزن الانشكاح؟</strong></p>
+				<p>لماذا يتحلزن الانشكاح داخليا حتى اذا التفَّ واستلفَّ وامرهفَّ واستخفَّ صار حلزوني الشكل دائري القاعدة اسطواني البتاعه؟</p>
+				<p class="ui-li-aside"><strong>06:24</strong>م</p>
+			</a></li>
+			<li><a href="#">
+				<h3>التنين المتين</h3>
+				<p><strong>ذهب التنين ليبحث عن تنينه شقراء</strong></p>
+				<p>لا يعرف إلى أين يتجه، لا يعرف كيف يجدها، لا يعرف المكان المتواجد فيه ولا يعرف هل هي تبحث عنه أيضا</p>
+				<p class="ui-li-aside"><strong>09:18</strong>ص</p>
+			</a></li>
+		    </ul>
+
+		    <p>&nbsp;</p>
+
+		    <ul data-role="listview" data-inset="true">
+			    <li><a href="#"><img src="demo-images/palestine.png" alt="فلسطين" class="ui-li-icon">فلسطين <span class="ui-li-count">4</span></a></li>
+                <li><a href="#"><img src="demo-images/egypt.png" alt="مصر" class="ui-li-icon ui-corner-none">مصر <span class="ui-li-count">85</span></a></li>
+			    <li><a href="#"><img src="demo-images/saudi.png" alt="السعودية" class="ui-li-icon">السعودية <span class="ui-li-count">30</span></a></li>
+                <li><a href="#"><img src="demo-images/turkey.png" alt="تركيا" class="ui-li-icon">تركيا <span class="ui-li-count">75</span></a></li>
+                <li><a href="#"><img src="demo-images/iran.png" alt="إيران" class="ui-li-icon">إيران <span class="ui-li-count">80</span></a></li>
+			    <li><a href="#"><img src="demo-images/tunis.png" alt="تونس" class="ui-li-icon ui-corner-none">تونس <span class="ui-li-count">15</span></a></li>
+                <li><a href="#"><img src="demo-images/pakistan.png" alt="باكستان" class="ui-li-icon">باكستان <span class="ui-li-count">178</span></a></li>
+		    </ul>
+		
+		    <p>&nbsp;</p>
+
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#">
+				<img src="demo-images/mtwally.jpg" />
+				<h3>حسبنا الله ونعم الوكيل</h3>
+				<p>عم متولي</p>
+			    </a><a href="#" data-rel="dialog" data-transition="slideup">زر
+			    </a></li>
+
+                <li><a href="#">
+				<img src="demo-images/mtr.jpg" />
+				<h3>اعمل الصح</h3>
+				<p>الأستاذ غسان</p>
+				</a><a href="#" data-rel="dialog" data-transition="slideup">زر
+			    </a></li>
+			    
+                <li><a href="#">
+				<img src="demo-images/saqqa.jpg" />
+				<h3>أنا الحكومه</h3>
+				<p>منصور</p>
+				</a><a href="#" data-rel="dialog" data-transition="slideup">زر
+			    </a></li>
+			</ul>
+			
+		    <p>&nbsp;</p>
+
+			<ul data-role="listview" data-filter-placeholder="فلتر.." data-filter="true" data-inset="true">
+				<li data-role="list-divider">أ</li>
+				<li data-filtertext="أحمد احمد حماده حوده ميدو"><a href="#">أحمد</a></li>
+				<li data-filtertext="انجي أنجلي إنجي"><a href="#">أنجي</a></li>
+				<li data-filtertext="ارنب أرنب"><a href="#">أرنب</a></li>
+				<li data-role="list-divider">ن</li>
+				<li data-filtertext="نافذة نافذه"><a href="#">نافذة</a></li>
+				<li data-role="list-divider">م</li>
+                <li data-filtertext="ميدو حوده حماده"><a href="#">محمد</a></li>
+                <li data-filtertext="ميدو حوده حماده"><a href="#">محمود</a></li>
+				<li data-filtertext="ميزو"><a href="#">معتز</a></li>
+				<li data-filtertext="ميجو"><a href="#">مأجوج</a></li>
+			</ul>
+
+            </div><!-- /lists -->
+
+        </div> <!-- /content -->
+    </div> <!-- /page -->
+</body>
+</html>

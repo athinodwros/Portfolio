@@ -44,14 +44,13 @@ namespace Portfolio
             "~/Scripts/jquery-1.*"));
 
             bundles.Add(new StyleBundle("~/Content/MobileCSS").Include(
-                "~/Content/jquery.mobile.structure-1.1.0.min.css",
-                "~/Content/jquery.mobile-1.1.0.css"));
-
-#if DEBUG
-            BundleTable.EnableOptimizations = false;
-#else 
-            BundleTable.EnableOptimizations = true; 
-#endif
+                "~/Content/jquery.mobile.structure-1.2.0.min.css",
+                "~/Content/jquery.mobile-1.2.0.css"));
+            #if DEBUG
+                BundleTable.EnableOptimizations = false; 
+            #else
+                BundleTable.EnableOptimizations = true; 
+            #endif
         }
     }
 }

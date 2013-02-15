@@ -1,9 +1,9 @@
 ﻿@{ 
-    Layout = "../Shared/_Layout.Phone.cshtml"; 
-    ViewBag.ShowBackButton = true;
+    Layout = "../Shared/_Layout.Phone.cshtml";
 }
 @{
     ViewBag.Title = "About phone";
+    ViewBag.navTab = "About";
 }
 
 <hgroup class="title">
@@ -30,9 +30,4 @@
     <p>
         Use this area to provide additional information.
     </p>
-    <ul>
-        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-    </ul>
 </aside>

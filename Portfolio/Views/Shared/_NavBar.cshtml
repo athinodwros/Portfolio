@@ -1,0 +1,7 @@
+﻿<div data-role="navbar" data-theme="b" data-iconpos="top">
+    <ul>
+        <li><a href="@Url.Action("Index", "Home")" data-icon="home" class="@(((string)ViewBag.navTab).Equals("Index") ? "ui-btn-active" : "" )">Home</a></li>
+        <li><a href="@Url.Action("About", "Home")" data-icon="info" class="@(((string)ViewBag.navTab).Equals("About") ? "ui-btn-active" : "" )">About Us</a></li>
+        <li><a href="@Url.Action("Contact", "Home")" data-icon="check" class="@(((string)ViewBag.navTab).Equals("Contact") ? "ui-btn-active" : "" )">Επικοινωνία</a></li>
+    </ul>
+</div>

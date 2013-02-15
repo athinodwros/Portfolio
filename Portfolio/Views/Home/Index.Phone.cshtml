@@ -1,16 +1,9 @@
 @{ Layout = "../Shared/_Layout.Phone.cshtml"; }
 @{
     ViewBag.Title = "Home Page vied from phone";
+    ViewBag.navTab = "Index";
 }
 @section featured {
-    <nav>
-        <ul data-role="listview" data-inset="true">
-            <li data-role="list-divider">Menu Items</li>
-            <li>@Html.ActionLink("About", "About", "Home")</li>
-            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-        </ul>
-    </nav>
-
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">

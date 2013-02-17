@@ -142,6 +142,10 @@ footer {
     text-decoration: none;
 }
 
+.site-title img{
+    text-align: center;
+}
+
 
 /* login
 ----------------------------------------------------------*/

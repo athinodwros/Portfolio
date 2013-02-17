@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>@ViewBag.Title - My ASP.NET MVC Application phone</title>
+    <title>@ViewBag.Title</title>
     <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="~/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -11,17 +11,27 @@
     @Scripts.Render("~/bundles/MobileJS")
 </head>
 <body>
-    <div data-role="page" data-theme="a" data-content-theme="a">
-        <div data-role="header" data-position="fixed" data-theme="a">
+    <div data-role="page" data-theme="b" data-content-theme="b">
+        @*<div data-role="header" data-position="fixed" data-theme="a">
             <h1>@ViewBag.Title</h1>
-        </div>
+        </div>*@
+        <p class="site-title" style="text-align: center">
+            <img src="~/Images/athensGift.png" alt="athensGift Logo" />
+        </p>
         <div data-role="content">
-            @RenderSection("featured", false)
-            @RenderBody()
-        </div>
-        <div data-role="footer" data-position="fixed" data-theme="a">
-            @Html.Partial("_NavBar")
+            <div>
+                @RenderSection("featured", false)
+                @RenderBody()
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                @Html.Partial("_NavBar")
+            </div>
         </div>
     </div>
 </body>
 </html>
+<?xml version="1.0" encoding="UTF-8" ?>
+@*<configuration> <system.webServer> <staticContent> <clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="30.00:00:00" />
+                                   </staticContent> </system.webServer> </configuration>*@ @*that is for content and scripts in order to load it auto .*@
+
+

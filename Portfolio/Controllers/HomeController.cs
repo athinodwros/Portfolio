@@ -10,14 +10,14 @@ namespace Portfolio.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "This is my portforlio";
+            ViewBag.Message = "Καλωσόρισες επισκέπτη!";
 
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Portfolio()
         {
-            ViewBag.Message = "Your app description page.";
+            ViewBag.Message = "Βιογραφικό";
 
             return View();
         }
@@ -25,6 +25,13 @@ namespace Portfolio.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Στοιχεία επικοινωνίας";
+
+            return View();
+        }
+
+        public ActionResult Settings()
+        {
+            ViewBag.Message = "Ρυθμίσεις";
 
             return View();
         }

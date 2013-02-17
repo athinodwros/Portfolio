@@ -40,8 +40,11 @@ namespace Portfolio
                         "~/Content/themes/base/jquery.ui.theme.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/MobileJS").Include(
-            "~/Scripts/jquery.mobile-1.*",
-            "~/Scripts/jquery-1.*"));
+            "~/Scripts/jquery-1.*",
+                "~/Scripts/CustomJquery.js",
+                "~/Scripts/jquery.mobile-1.*"
+            
+            ));
 
             bundles.Add(new StyleBundle("~/Content/MobileCSS").Include(
                 "~/Content/jquery.mobile.structure-1.2.0.min.css",

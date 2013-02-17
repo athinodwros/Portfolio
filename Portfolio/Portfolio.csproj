@@ -163,11 +163,13 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ViewSwitcherController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\ContactModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -238,6 +240,12 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Images\athensGift.png" />
+    <Content Include="Images\gmail_icon.png" />
+    <Content Include="Images\hotmail_icon.png" />
+    <Content Include="Images\mail_icon.png" />
+    <Content Include="Images\phone_icon.png" />
+    <Content Include="Images\phone_mobile_icon.png" />
     <Content Include="jquery.mobile.rtl\demo-images\egypt.png" />
     <Content Include="jquery.mobile.rtl\demo-images\iran.png" />
     <Content Include="jquery.mobile.rtl\demo-images\mtr.jpg" />
@@ -261,6 +269,7 @@
     <Content Include="jquery.mobile.rtl\rtl.jquery.mobile-1.2.0.js" />
     <Content Include="jquery.mobile.rtl\rtl.jquery.mobile-1.2.0.min.css" />
     <Content Include="jquery.mobile.rtl\rtl.jquery.mobile-1.2.0.min.js" />
+    <Content Include="Scripts\customJquery.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -310,7 +319,7 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Portfolio.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
@@ -321,11 +330,21 @@
     <Content Include="Views\Shared\_Layout.Tablet.cshtml" />
     <Content Include="Views\Home\Index.Phone.cshtml" />
     <Content Include="Views\Home\Index.Tablet.cshtml" />
-    <Content Include="Views\Home\About.Tablet.cshtml" />
-    <Content Include="Views\Home\About.Phone.cshtml" />
+    <Content Include="Views\Home\Portfolio.Tablet.cshtml" />
+    <Content Include="Views\Home\Portfolio.Phone.cshtml" />
     <Content Include="Views\Home\Contact.Phone.cshtml" />
     <Content Include="Views\Home\Contact.Tablet.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Shared\Contact\_Contact_Info.cshtml" />
+    <Content Include="Views\Shared\Index\_Index_BasicInfo.cshtml" />
+    <Content Include="Views\Shared\Index\_Index_Suggestions.cshtml" />
+    <Content Include="Views\Shared\Porfolio\_Portfolio_Jobs.cshtml" />
+    <Content Include="Views\Shared\Porfolio\_Portfolio_AdditionalInfo.cshtml" />
+    <Content Include="Views\Shared\_ViewSwitcher.Phone.cshtml" />
+    <Content Include="Views\Home\Settings.Phone.cshtml" />
+    <Content Include="Views\Shared\_ViewSwitcher.cshtml" />
+    <Content Include="Views\Home\Settings.cshtml" />
+    <Content Include="Views\Shared\Index\_Index_ShortBio.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

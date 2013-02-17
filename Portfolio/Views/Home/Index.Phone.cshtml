@@ -1,47 +1,79 @@
-@{ Layout = "../Shared/_Layout.Phone.cshtml"; }
+@{ 
+    Layout = "../Shared/_Layout.Phone.cshtml";
+}
 @{
-    ViewBag.Title = "Home Page vied from phone";
+    ViewBag.Title = "Phone Portfolio";
     ViewBag.navTab = "Index";
 }
 @section featured {
     <section class="featured">
         <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-            <p>
-                To learn more about ASP.NET MVC visit
-                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
-                If you have any questions about ASP.NET MVC visit
-                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
-            </p>
+
+            <ul data-role="listview" data-inset="false">
+                <li data-role="list-divider">Σύντομο βιογραφικό
+                </li>
+                <li data-theme="c">
+                    @Html.Partial("Index/_Index_ShortBio")
+                </li>
+
+            </ul>
+
+            <div data-role="collapsible" data-collapsed="true" data-inset="false">
+                <h2>Προσωπικές πληροφορίες</h2>
+                <ul data-role="listview" data-inset="true">
+                    <li data-role="list-divider">Ονοματεπώνυμο
+                    </li>
+                    <li data-theme="c">Φαφούτης Αθηνόδωρος
+                    </li>
+                    <li data-role="list-divider">Ημερομηνία γέννησης
+                    </li>
+                    <li data-theme="c">02/Φεβ/1989
+                    </li>
+                    <li data-role="list-divider">Στρατιωτική υποχρέωση
+                    </li>
+                    <li data-theme="c">Ολοκληρωμένη
+                    </li>
+                    <li data-role="list-divider">Οικογενειακή κατάσταση
+                    </li>
+                    <li data-theme="c">Άγαμος
+                    </li>
+                    <li data-role="list-divider">Υπηκοότητα
+                    </li>
+                    <li data-theme="c">Ελληνική
+                    </li>
+                    <li data-role="list-divider">Τόπος διαμονής
+                    </li>
+                    <li data-theme="c">Παγκράτι και Χολαργός
+                    </li>
+                </ul>
+            </div>
+
+            <div data-role="collapsible" data-collapsed="true" data-inset="false">
+                <h2>Λίγα λόγια για εμένα</h2>
+                <ol data-role="listview" data-inset="true">
+                    <li data-role="list-divider">Μερικά απο τα στοιχεία που λένε οτι με χαρακτηρίζουν 
+                    </li>
+                    <li data-theme="c">Πνεύμα συνεργασίας εντός ομάδας για την επίτευξη μεγάλων στόχων
+                    </li>
+                    <li data-theme="c">Επικοινωνιακές ικανότητες
+                    </li>
+                    <li data-theme="c">Καλή αντίληψη της οργάνωσης και πείρα στη διαχείριση έργων πληροφορικής
+                    </li>
+                    <li data-theme="c">Ικανότητα γρήγορης προσαρμογής σε διαφορετικές συνθήκες εργασίας
+                    </li>
+                </ol>
+                <ol data-role="listview" data-inset="true">
+                    <li data-role="list-divider">Κάποια προσωπικά ενδιαφέροντα
+                    </li>
+                    <li data-theme="c">Διαρκή παρακολούθηση τεχνολογικών εξελίξεων (geek θα λέγαμε)
+                    </li>
+                    <li data-theme="c">Προγραμματισμός ιστιοσελίδων και προγραμμάτων
+                    </li>
+                    <li data-theme="c">Αθλητισμός, με ιδιαίτερη προτήμηση στο basket και στη κολύμβηση
+                    </li>
+                </ol>
+            </div>
+
         </div>
     </section>
 }
-<h3>We suggest the following:</h3>
-<ol class="round">
-    <li class="one">
-        <h5>Getting Started</h5>
-        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-        enables a clean separation of concerns and that gives you full control over markup
-        for enjoyable, agile development. ASP.NET MVC includes many features that enable
-        fast, TDD-friendly development for creating sophisticated applications that use
-        the latest web standards.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn more…</a>
-    </li>
-
-    <li class="two">
-        <h5>Add NuGet packages and jump-start your coding</h5>
-        NuGet makes it easy to install and update free libraries and tools.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245153">Learn more…</a>
-    </li>
-
-    <li class="three">
-        <h5>Find Web Hosting</h5>
-        You can easily find a web hosting company that offers the right mix of features
-        and price for your applications.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
-    </li>
-</ol>

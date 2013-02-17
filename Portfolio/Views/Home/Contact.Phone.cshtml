@@ -5,44 +5,69 @@
     ViewBag.Title = "Επικοινωνία";
     ViewBag.navTab = "Contact";
 }
+@model Portfolio.Models.ContactModel
 
-<hgroup class="title">
-    <h2>@ViewBag.Message</h2>
-</hgroup>
+<ul data-role="listview" data-inset="true">
+    <li data-role="list-divider">Τηλέφωνο
+    </li>
+    <li data-theme="c">
+        <a href="tel:+306971741157">
+            <img src="~/Images/phone_mobile_icon.png" alt="tel" class="ui-li-icon" />
+            6971741157 (whats up)
+        </a>
+    </li>
+    <li data-theme="c">
+        <a href="tel:+302155704747">
+            <img src="~/Images/phone_icon.png" alt="tel" class="ui-li-icon" />
+            2155704747 (cyta)
+        </a>
+    </li>
+</ul>
+<ul data-role="listview" data-inset="true">
+    <li data-role="list-divider">Email
+    </li>
+    <li data-theme="c">
+        <a href="mailto:athinodwros89@gmail.com">
+            <img src="~/Images/gmail_icon.png" alt="tel" class="ui-li-icon" />
+            athinodwros89@gmail.com
+        </a>
+    </li>
+    <li data-theme="c">
+        <a href="mailto:exw_kai_msn@hotmail.com">
+            <img src="~/Images/hotmail_icon.png" alt="tel" class="ui-li-icon" />
+            exw_kai_msn@hotmail.com
+        </a>
+    </li>
+</ul>
 
-<section class="contact">
-    <header>
-        <h3>Τηλέφωνο</h3>
-    </header>
-    <p>
-        <span class="label">Κινητό:</span>
-        <span>6971741157</span>
-    </p>
-    <p>
-        <span class="label">Σταθερό:</span>
-        <span>2106542353</span>
-    </p>
-</section>
+<ul data-role="listview" data-inset="true">
+    <li data-role="list-divider">Σχετικά
+    </li>
+    <li data-theme="c">Επικοινωνήστε σε κάποιο mail για περισσότερες πληροφορίες ή συμπληρώστε την παρακάτω φόρμα.
+    </li>
+</ul>
 
-<section class="contact">
-    <header>
-        <h3>Email</h3>
-    </header>
-    <p>
-        <span class="label">Εργασίας:</span>
-        <span><a href="mailto:Support@example.com">athinodwros89@gmail.com</a></span>
-    </p>
-    <p>
-        <span class="label">Γενικό:</span>
-        <span><a href="mailto:Marketing@example.com">exw_kai_msn@hotmail.com</a></span>
-    </p>
-</section>
-
-<section class="contact">
-    <header>
-        <h3>Σχετικά</h3>
-    </header>
-    <p>
-        Επικοινωνήστε στο προσωπικό mail για περισσότερες πληροφορίες.
-    </p>
-</section>
+<ul data-role="listview" data-inset="true">
+    <li data-role="list-divider">Φόρμα επικοινωνίας
+    </li>
+    <li data-theme="c">
+        <form id="contactform">
+            @*TODO: prepei na ftiaksw swsta tin forma*@
+            <div data-role="fieldcontain">
+                @Html.LabelFor(m => m.Phone)
+                @Html.EditorFor(m => m.Phone)
+                <span style="Color: Red;">@Html.ValidationMessageFor(m => m.Phone)</span>
+                @Html.LabelFor(m => m.Email)
+                @Html.EditorFor(m => m.Email)
+                <span style="Color: Red;">@Html.ValidationMessageFor(m => m.Email)</span>
+                @Html.LabelFor(m => m.Time)
+                @Html.EditorFor(m => m.Time)
+                <span style="Color: Red;">@Html.ValidationMessageFor(m => m.Time)</span>
+                @Html.LabelFor(m => m.Text)
+                @Html.EditorFor(m => m.Text)
+                <span style="Color: Red;">@Html.ValidationMessageFor(m => m.Text)</span>
+            </div>
+            <button type="submit" formtarget="contactform">Αποστολή</button>
+        </form>
+    </li>
+</ul>

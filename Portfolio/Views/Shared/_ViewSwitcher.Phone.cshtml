@@ -1,0 +1,17 @@
+﻿<div data-role="collapsible" data-inset="false">
+    <h2>Αλλαγή εμφάνισης</h2>
+    <ul data-role="listview"  data-inset="true">
+        <li>
+            @Html.ActionLink("Desktop View", "SwitchView", "ViewSwitcher", new { mobile = false, mobileType = "Desktop", returnUrl = Request.Url.PathAndQuery }, new { rel = "external" })
+        </li>
+        <li>
+            @Html.ActionLink("Tablet View", "SwitchView", "ViewSwitcher", new { mobile = true, mobileType = "Tablet", returnUrl = Request.Url.PathAndQuery }, new { rel = "external" })
+        </li>
+        <li>
+            @Html.ActionLink("Phone View", "SwitchView", "ViewSwitcher", new { mobile = true, mobileType = "Phone", returnUrl = Request.Url.PathAndQuery }, new { rel = "external" })
+        </li>
+        <li>
+            @Html.ActionLink("Default View", "SwitchView", "ViewSwitcher", new { mobile = false, mobileType = "Default", returnUrl = Request.Url.PathAndQuery }, new { rel = "external" })
+        </li>
+    </ul>
+</div>

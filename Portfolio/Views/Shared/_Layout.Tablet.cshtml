@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>@ViewBag.Title - My ASP.NET MVC Application tablet</title>
+    <title>@ViewBag.Title</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
     @Styles.Render("~/Content/MobileCss")
@@ -13,29 +13,13 @@
     <div data-role="page" data-theme="b">
         <div data-role="header" data-position="fixed" data-theme="b">
             <h1>@ViewBag.Title</h1>
-            @{ bool ShowBackButton = false; 
-               bool ShowHomeButton = false;
-               if (ViewBag.ShowBackButton != null && ViewBag.ShowBackButton == true) { 
-                   ShowBackButton = true; 
-               } 
-               if (ViewBag.ShowHomeButton != null && ViewBag.ShowHomeButton == true) { 
-                   ShowHomeButton = true; 
-               } 
-               if (ShowBackButton) { 
-                   <a data-rel="back" data-role="button" 
-                       data-transition="slide" data-direction="reverse" 
-                       data-icon="back">Back</a> 
-               } 
-               if (ShowHomeButton){ 
-                   <a href="@Url.Action("Index", "Home")" data-role="button" 
-                       data-transition="slide" data-direction="reverse" 
-                       data-icon="home">Home</a> 
-               }
-            }
         </div>
         <div data-role="content" data-theme="d">
-            @RenderSection("featured", false) 
+            @RenderSection("featured", false)
             @RenderBody()
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            @Html.Partial("_ViewSwitcher")
         </div>
     </div>
 </body>

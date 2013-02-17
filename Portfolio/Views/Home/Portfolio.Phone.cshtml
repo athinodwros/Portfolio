@@ -1,0 +1,78 @@
+﻿@{ 
+    Layout = "../Shared/_Layout.Phone.cshtml";
+}
+@{
+    ViewBag.Title = "Βιογραφικό";
+    ViewBag.navTab = "Βιογραφικό";
+}
+
+<div data-role="collapsible" data-collapsed="true" data-inset="false">
+    <h2>Σπουδές</h2>
+    <h4>Πτυχιούχος του τμήματος Πληροφορικής του Οικονομικού Πανεπιστημίου Αθηνών (Ανώτατο Εκπαιδευτικό Ίδρυμα)
+                    28ης Οκτωβρίου 76, Αθήνα (Ελλάδα)
+    </h4>
+    <ul data-role="listview" data-inset="true">
+        <li data-role="list-divider">Κύκλοι σπουδών
+        </li>
+        <li data-theme="c">Πληροφοριακά συστήματα και ασφάλεια 
+        </li>
+        <li data-theme="c">Βάσεις δεδομένων και διαχείριση γνώσης 
+        </li>
+    </ul>
+    <ul data-role="listview" data-inset="true">
+        <li data-role="list-divider">Επίπεδο κατάρτισης
+        </li>
+        <li data-theme="c">ISCED 5
+        </li>
+    </ul>
+</div>
+
+<div data-role="collapsible" data-collapsed="true" data-inset="false">
+    <h2>Γνώσεις πληροφορικής</h2>
+    <ul data-role="listview" data-inset="true">
+        <li data-role="list-divider">Γλώσσες
+        </li>
+        <li data-theme="c">Εμπέιρία στην χρήση:
+            <br />
+            C#, JavaScript - jQuery - JSON, HTML5, CSS3, XML
+        </li>
+        <li data-theme="c">Γνώσεις:
+            <br />
+            λογισμικό Java, C, C++®, PHP, Fortran
+        </li>
+        <li data-theme="c">Βάσεις δεδομένων: 
+            <br />
+            SQL @*TODO na mathw glwsses me baseis*@
+        </li>
+    </ul>
+    <ul data-role="listview" data-inset="true">
+        <li data-role="list-divider">Εργαλεία
+        </li>
+        <li data-theme="c">.Net, Visual Studio 2008-12, Chrome Developer Tools, SVN, Git,
+                        GitHub, BitBucket, Eclipse, JCreator, Net Beans,  Expression Blend, Titanium Studio.
+        </li>
+    </ul>
+    <ul data-role="listview" data-inset="true">
+        <li data-role="list-divider">Τεχνικές γνώσεις
+        </li>
+        <li data-theme="c">Windows XP –Vista – Seven - Eight, Linux, MS office(Word, Excel, Power Point)
+        </li>
+    </ul>
+    <ul data-role="listview" data-inset="true">
+        <li data-role="list-divider">Άλλες γνώσεις
+        </li>
+        <li data-theme="c">Άριστος χειρισμός Internet και μηχανών αναζήτησης,
+                         Άριστος χειρισμός Android OS έως και 4.1.1, Git, SSL3, trello, OpenSSL, Keytool.
+        </li>
+    </ul>
+</div>
+
+<div data-role="collapsible" data-collapsed="true" data-inset="false">
+    <h2>Δουλειές</h2>
+    @Html.Partial("Porfolio/_Portfolio_Jobs")
+</div>
+
+<div data-role="collapsible" data-collapsed="true" data-inset="false">
+    <h2>Επιπλέον Έργα</h2>
+    @Html.Partial("Porfolio/_Portfolio_AdditionalInfo")
+</div>

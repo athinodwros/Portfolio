@@ -32,7 +32,7 @@ namespace Portfolio.Tests.Controllers
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.About() as ViewResult;
+            ViewResult result = controller.Contact() as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);

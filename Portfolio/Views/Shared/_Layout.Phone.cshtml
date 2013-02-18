@@ -11,7 +11,7 @@
     @Scripts.Render("~/bundles/MobileJS")
 </head>
 <body>
-    <div data-role="page" data-theme="b" data-content-theme="b">
+    <div data-role="page" data-theme="a" data-content-theme="a">
         @*<div data-role="header" data-position="fixed" data-theme="a">
             <h1>@ViewBag.Title</h1>
         </div>*@
@@ -23,7 +23,7 @@
                 @RenderSection("featured", false)
                 @RenderBody()
             </div>
-            <div data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="footer" data-position="fixed" data-theme="a">
                 @Html.Partial("_NavBar")
             </div>
         </div>
